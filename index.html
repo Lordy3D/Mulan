@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mulan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./images/logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="./images/bg.jpg" class="bg">
+        <div class="content">
+            <img src="./images/name.png" class="movieTitle">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Mulan, who just got rejected by the matchmaker because she had set her on fire, decides to prove that she is worth something and steals away to fit her father's place in the Chinese army. She prays to her family's ancestors for protection and luck before leaving as a man in her father's armor with her family's horse.</p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> My list</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="./images/play.png" alt="">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <iframe class="video"  src="https://www.youtube.com/embed/KK8FHdFluOQ" allowfullscreen></iframe>
+        <img src="./images/close.png" class="close" onclick="toggleVideo();">
+    </div>
+
+<script>
+    function toggleVideo(){
+        const trailer = document.querySelector('.trailer')
+        const video = document.querySelector('.video');
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.pause();
+    }
+</script>
+    
+</body>
+</html>
